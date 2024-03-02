@@ -4,23 +4,28 @@
 
 package frc.robot;
 
+import com.techhounds.houndutil.houndlog.LoggingManager;
+import com.techhounds.houndutil.houndlog.interfaces.Log;
+
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.subsystems.Drivetrain;
 
 public class RobotContainer {
+  @Log
   private final Drivetrain drivetrain = new Drivetrain();
   private final CommandXboxController controller = new CommandXboxController(0);
 
   public RobotContainer() {
+    LoggingManager.getInstance().registerRobotContainer(this);
     configureBindings();
   }
 
   private void configureBindings() {
     drivetrain.setDefaultCommand(
-        drivetrain.teleopDriveCommand(() -> -controller.getLeftY(), () -> -controller.getLeftX(),
-            () -> controller.getRightTriggerAxis()));
+        drivetrain.teleopDriveCommand(() -> -controller.getLeftX(), () -> -controller.getLeftY(),
+            () -> 0));
   }
 
   public Command getAutonomousCommand() {

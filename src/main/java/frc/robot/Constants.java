@@ -61,10 +61,10 @@ public final class Constants {
                 public static final int BACK_LEFT_STEER_ENCODER_ID = 3;
                 public static final int BACK_RIGHT_STEER_ENCODER_ID = 4;
 
-                public static final double FRONT_LEFT_OFFSET = 0.233154296875;
-                public static final double FRONT_RIGHT_OFFSET = 0.142822265625;
-                public static final double BACK_LEFT_OFFSET = 0.05810546875;
-                public static final double BACK_RIGHT_OFFSET = -0.268310546875;
+                public static final double FRONT_LEFT_OFFSET = 0.23583984375;
+                public static final double FRONT_RIGHT_OFFSET = 0.138916015625;
+                public static final double BACK_LEFT_OFFSET = 0.059814453125;
+                public static final double BACK_RIGHT_OFFSET = -0.26953125;
 
                 /** Distance between left and right wheels. */
                 public static final double TRACK_WIDTH_METERS = Units.inchesToMeters(22.75);
@@ -83,7 +83,7 @@ public final class Constants {
                         SWERVE_CONSTANTS.STEER_kI = 0.0;
                         SWERVE_CONSTANTS.STEER_kD = 0.1;
 
-                        SWERVE_CONSTANTS.DRIVE_GEARING = 6.75;
+                        SWERVE_CONSTANTS.DRIVE_GEARING = 6.12;
                         SWERVE_CONSTANTS.STEER_GEARING = 150.0 / 7.0;
                         SWERVE_CONSTANTS.WHEEL_CIRCUMFERENCE = 2.0 * Math.PI * 0.0478;
                         SWERVE_CONSTANTS.DRIVE_ENCODER_ROTATIONS_TO_METERS = SWERVE_CONSTANTS.WHEEL_CIRCUMFERENCE

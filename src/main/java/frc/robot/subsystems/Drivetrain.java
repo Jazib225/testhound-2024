@@ -73,7 +73,7 @@ public class Drivetrain extends SubsystemBase {
             FRONT_LEFT_STEER_MOTOR_ID,
             FRONT_LEFT_STEER_ENCODER_ID,
             false,
-            true,
+            false,
             false,
             FRONT_LEFT_OFFSET,
             SWERVE_CONSTANTS);
@@ -85,7 +85,7 @@ public class Drivetrain extends SubsystemBase {
             FRONT_RIGHT_STEER_MOTOR_ID,
             FRONT_RIGHT_STEER_ENCODER_ID,
             false,
-            true,
+            false,
             false,
             FRONT_RIGHT_OFFSET,
             SWERVE_CONSTANTS);
@@ -97,7 +97,7 @@ public class Drivetrain extends SubsystemBase {
             BACK_LEFT_STEER_MOTOR_ID,
             BACK_LEFT_STEER_ENCODER_ID,
             false,
-            true,
+            false,
             false,
             BACK_LEFT_OFFSET,
             SWERVE_CONSTANTS);
@@ -109,7 +109,7 @@ public class Drivetrain extends SubsystemBase {
             BACK_RIGHT_STEER_MOTOR_ID,
             BACK_RIGHT_STEER_ENCODER_ID,
             false,
-            true,
+            false,
             false,
             BACK_RIGHT_OFFSET,
             SWERVE_CONSTANTS);
