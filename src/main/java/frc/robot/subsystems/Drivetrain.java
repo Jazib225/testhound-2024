@@ -553,6 +553,18 @@ public class Drivetrain extends SubsystemBase {
             rightFrontWheel.setSpeed(power);
             rightBackWheel.setSpeed(power);
         }
+        public void inplaceTurn(double power)
+{
+        leftFrontWheel.setDirection(135.0);
+        leftBackWheel.setDirection(45.0);
+        rightFrontWheel.setDirection(-45.0);
+        rightBackWheel.setDirection(-135.0);
+
+        leftFrontWheel.setSpeed(power);
+        leftBackWheel.setSpeed(power);
+        rightFrontWheel.setSpeed(power);
+        rightBackWheel.setSpeed(power);
+}
         public void translateTurn(double direction, double translatePower, double turnPower){
     double turnAngle = turnPower * 45.0;
     if (closestAngle(direction, 135.0) >= 90.0){
