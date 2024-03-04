@@ -528,4 +528,17 @@ public class Drivetrain extends SubsystemBase {
                 this)
                 .finallyDo((d) -> this.stop());
     }
+
+    public class SwerveDriveCoordinator{
+        SwerveDriveWheel frontLeft;
+        SwerveDriveWheel backLeft;
+        SwerveDriveWheel frontRight;
+        SwerveDriveWheel backRight;
+    
+        public SwerveDriveCoordinator(SwerveDriveWheel frontLeft, SwerveDriveWheel backLeft, SwerveDriveWheel frontRight, SwerveDriveWheel backRight) {
+            this.frontLeft = frontLeft;
+            this.backLeft = backLeft;
+            this.frontRight = frontRight;
+            this.backRight = backRight;
+        }
 }
