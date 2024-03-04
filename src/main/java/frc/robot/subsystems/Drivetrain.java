@@ -541,16 +541,16 @@ public class Drivetrain extends SubsystemBase {
             this.frontRight = frontRight;
             this.backRight = backRight;
         }
-        public void translate(double direction, double speeed)
+        public void translate(double direction, double power)
         {
             leftFrontWheel.setDirection(direction);
             leftBackWheel.setDirection(direction);
             rightFrontWheel.setDirection(direction);
             rightBackWheel.setDirection(direction);
         
-            leftFrontWheel.setSpeed(speeed);
-            leftBackWheel.setSpeed(speeed);
-            rightFrontWheel.setSpeed(speeed);
-            rightBackWheel.setSpeed(speeed);
+            leftFrontWheel.setSpeed(power);
+            leftBackWheel.setSpeed(power);
+            rightFrontWheel.setSpeed(power);
+            rightBackWheel.setSpeed(power);
         }
 }
