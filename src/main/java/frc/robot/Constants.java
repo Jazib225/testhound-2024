@@ -181,6 +181,7 @@ public final class Constants {
                 public static final double ANGLE = Units.degreesToRadians(90 - 32);
 
                 public static final int CURRENT_LIMIT = 40;
+                
 
                 public static final double kP = 60;
                 public static final double kI = 0;
