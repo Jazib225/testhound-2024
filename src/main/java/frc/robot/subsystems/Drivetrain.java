@@ -543,59 +543,59 @@ public class Drivetrain extends SubsystemBase {
         }
         public void translate(double direction, double power)
         {
-            leftFrontWheel.setDirection(direction);
-            leftBackWheel.setDirection(direction);
-            rightFrontWheel.setDirection(direction);
-            rightBackWheel.setDirection(direction);
+            frontLeft.setDirection(direction);
+            backLeft.setDirection(direction);
+            frontRight.setDirection(direction);
+            backRight.setDirection(direction);
         
-            leftFrontWheel.setSpeed(power);
-            leftBackWheel.setSpeed(power);
-            rightFrontWheel.setSpeed(power);
-            rightBackWheel.setSpeed(power);
+            frontLeft.setSpeed(power);
+            backLeft.setSpeed(power);
+            frontRight.setSpeed(power);
+            backRight.setSpeed(power);
         }
         public void inplaceTurn(double power)
 {
-        leftFrontWheel.setDirection(135.0);
-        leftBackWheel.setDirection(45.0);
-        rightFrontWheel.setDirection(-45.0);
-        rightBackWheel.setDirection(-135.0);
+        frontLeft.setDirection(135.0);
+        backLeft.setDirection(45.0);
+        frontRight.setDirection(-45.0);
+        backRight.setDirection(-135.0);
 
-        leftFrontWheel.setSpeed(power);
-        leftBackWheel.setSpeed(power);
-        rightFrontWheel.setSpeed(power);
-        rightBackWheel.setSpeed(power);
+        frontLeft.setSpeed(power);
+        backLeft.setSpeed(power);
+        frontRight.setSpeed(power);
+        backRight.setSpeed(power);
 }
         public void translateTurn(double direction, double translatePower, double turnPower){
     double turnAngle = turnPower * 45.0;
     if (closestAngle(direction, 135.0) >= 90.0){
-        leftFrontWheel.setDirection(direction + turnAngle);
+        frontLeft.setDirection(direction + turnAngle);
     }
     else{
-        leftFrontWheel.setDirection(direction - turnAngle);
+        frontLeft.setDirection(direction - turnAngle);
     }
     if (closestAngle(direction, 225.0) > 90.0){
-        leftBackWheel.setDirection(direction + turnAngle);
+        backLeft.setDirection(direction + turnAngle);
     }
     else{
-        leftBackWheel.setDirection(direction - turnAngle);
+        backLeft.setDirection(direction - turnAngle);
     }
     if (closestAngle(direction, 45.0) > 90.0){
-        rightFrontWheel.setDirection(direction + turnAngle);
+        frontRight.setDirection(direction + turnAngle);
     }
     else{
-        rightFrontWheel.setDirection(direction - turnAngle);
+        frontRight.setDirection(direction - turnAngle);
     }
     if (closestAngle(direction, 315.0) >= 90.0) {
-        rightBackWheel.setDirection(direction + turnAngle);
+        backRight.setDirection(direction + turnAngle);
     }
     else{
-        rightBackWheel.setDirection(direction - turnAngle);
+        backRight.setDirection(direction - turnAngle);
     }
 }
-    leftFrontWheel.setSpeed(translatePower);
-    leftBackWheel.setSpeed(translatePower);
-    rightFrontWheel.setSpeed(translatePower);
-    rightBackWheel.setSpeed(translatePower);
+    frontLeft.setSpeed(translatePower);
+    backLeft.setSpeed(translatePower);
+    frontRight.setSpeed(translatePower);
+    backRight.setSpeed(translatePower);
 
     public void setSwerveDrive(double direction, double translatePower, double turnPower)
 {
