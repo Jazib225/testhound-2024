@@ -553,8 +553,7 @@ public class Drivetrain extends SubsystemBase {
             rightFrontWheel.setSpeed(power);
             rightBackWheel.setSpeed(power);
         }
-        public void translateTurn(double direction, double translatePower, double turnPower)
-{
+        public void translateTurn(double direction, double translatePower, double turnPower){
     double turnAngle = turnPower * 45.0;
     if (closestAngle(direction, 135.0) >= 90.0){
         leftFrontWheel.setDirection(direction + turnAngle);
@@ -581,4 +580,8 @@ public class Drivetrain extends SubsystemBase {
         rightBackWheel.setDirection(direction - turnAngle);
     }
 }
+    leftFrontWheel.setSpeed(translatePower);
+    leftBackWheel.setSpeed(translatePower);
+    rightFrontWheel.setSpeed(translatePower);
+    rightBackWheel.setSpeed(translatePower);
 }
